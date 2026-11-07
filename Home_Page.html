@@ -723,10 +723,11 @@
     </div>
 
     <script>
-        
+
         var CONTACTS = {
             email: {
                 text: 'bhuckoryharry@gmail.com',
+                link: 'mailto:bhuckoryharry@gmail.com'
             },
             whatsapp: {
                 text: '58553699',
@@ -737,7 +738,7 @@
             }
         };
 
-        // Footer 
+        // Footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
         var root = document.documentElement;
@@ -759,7 +760,7 @@
             try { localStorage.setItem('theme', next); } catch (e) { }
         });
 
-        // View Details 
+        // View Details
         document.querySelectorAll('.toggle').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 var panel = document.getElementById(btn.getAttribute('aria-controls'));
@@ -797,7 +798,7 @@
             cards.forEach(function (c) { c.classList.add('visible'); });
         }
 
-        // Popup 
+        // Popup
         var overlay = document.getElementById('overlay');
         var closeBtn = document.getElementById('panelClose');
         var panelText = document.getElementById('panelText');
@@ -822,7 +823,7 @@
                 panelText.appendChild(a);
                 panelText.classList.add('has-link');
             } else {
-             
+
                 panelText.textContent = info.text;
             }
 
